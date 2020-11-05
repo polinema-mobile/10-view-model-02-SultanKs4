@@ -1,6 +1,7 @@
 package id.putraprima.mvvmlogin.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,7 +34,9 @@ class LoginFragment : Fragment() {
 
 
         loginViewModel.userLiveData.observe(viewLifecycleOwner, { value ->
+            Log.e("observeUser", value.email + " " + value.password)
             mUser = value
+            Log.e("mUser", mUser.email + " " + mUser.password)
         })
 
         loginViewModel.loggedLiveData.observe(viewLifecycleOwner, { value ->
