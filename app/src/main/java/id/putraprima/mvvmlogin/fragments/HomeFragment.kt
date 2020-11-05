@@ -1,7 +1,6 @@
 package id.putraprima.mvvmlogin.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,7 +17,6 @@ class HomeFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         binding.fragment = this
         email = "Halo, ${arguments?.getString("email").toString()}"
-        Log.e("email", email)
         return binding.root
     }
 }

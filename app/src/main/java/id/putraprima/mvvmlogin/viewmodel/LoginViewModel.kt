@@ -37,8 +37,8 @@ class LoginViewModel : ViewModel() {
         }
         if (user.email.isNotEmpty() || user.password.isNotEmpty()) {
             if (user.email.equals(userDummy.email) and user.password.equals(userDummy.password)) {
-                loggedIn.value = true
                 userMutable.value = user
+                loggedIn.value = true
             } else {
                 emailError.value = "Email tidak cocok"
                 passwordError.value = "Password tidak cocok"
